@@ -23,6 +23,8 @@ public class SaleController implements Serializable {
 	@Autowired
 	private SaleService service;
 
+	
+	//paginação
 	@GetMapping
 	@Transactional(readOnly = true)
 	public ResponseEntity<Page<SaleDTO>> findAll(Pageable pageable) {
